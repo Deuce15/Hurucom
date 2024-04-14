@@ -6,3 +6,64 @@ def home(request):
 
 def contact(request):
     return render(request, 'contact.html', {})
+
+def about(request):
+    return render(request, 'about.html', {})
+
+def cart(request):
+    return render(request, 'cart.html', {})
+
+def checkout(request):
+    return render(request, 'checkout.html', {})
+
+def faq(request):
+    return render(request, 'faq.html', {})
+
+def gallery(request):
+    return render(request, 'gallery.html', {})
+
+def gallerycarousel(request):
+    return render(request, 'gallery-carousel.html', {})
+
+def news(request):
+    return render(request, 'news.html', {})
+
+def newsdetails(request):
+    return render(request, 'news-details.html', {})
+
+def newscarousel(request):
+    return render(request, 'news-carousel.html', {})
+
+def newssidebar(request):
+    return render(request, 'news-sidebar.html', {})
+
+def newssidebarleft(request):
+    return render(request, 'news-sidebar-left.html', {})
+
+def packages1(request):
+    return render(request, 'packages-01.html', {})
+
+
+def packages2(request):
+    return render(request, 'packages-02.html', {})
+
+def team(request):
+    return render(request, 'team.html', {})
+
+def teamcarousel(request):
+    return render(request, 'team-carousel.html', {})
+
+def products(request):
+    return render(request, 'products.html', {})
+
+def productdetails(request):
+    return render(request, 'product-details.html', {})
+
+def services(request):
+    return render(request, 'services.html', {})
+
+def servicescarousel(request):
+    return render(request, 'services-carousel.html', {})
+
+def testimonials(request):
+    return render(request, 'testimonials.html', {})
