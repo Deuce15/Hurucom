@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,13 +9,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> FAQ || Zeinet || Zeinet HTML 5 Template </title>
+    <title> HURUCOM </title>
     <!-- favicons Icons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicons/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicons/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicons/favicon-16x16.png" />
-    <link rel="manifest" href="assets/images/favicons/site.webmanifest" />
-    <meta name="description" content="Zeinet HTML 5 Template " />
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'website/' %}assets/images/favicons/hurucom title.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'website/' %}assets/images/favicons/hurucom title.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'website/' %}assets/images/favicons/hurucom title.png" />
+    <link rel="manifest" href="{% static 'website/' %}assets/images/favicons/site.webmanifest" />
+    <meta name="description" content="Hurucom" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -23,30 +25,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&amp;display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/vendors/bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/animate.min.css" />
-    <link rel="stylesheet" href="assets/vendors/animate/custom-animate.css" />
-    <link rel="stylesheet" href="assets/vendors/fontawesome/css/all.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jarallax/jarallax.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/nouislider/nouislider.pips.css" />
-    <link rel="stylesheet" href="assets/vendors/odometer/odometer.min.css" />
-    <link rel="stylesheet" href="assets/vendors/swiper/swiper.min.css" />
-    <link rel="stylesheet" href="assets/vendors/zeinet-icons/style.css">
-    <link rel="stylesheet" href="assets/vendors/tiny-slider/tiny-slider.min.css" />
-    <link rel="stylesheet" href="assets/vendors/reey-font/stylesheet.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.carousel.min.css" />
-    <link rel="stylesheet" href="assets/vendors/owl-carousel/owl.theme.default.min.css" />
-    <link rel="stylesheet" href="assets/vendors/bxslider/jquery.bxslider.css" />
-    <link rel="stylesheet" href="assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
-    <link rel="stylesheet" href="assets/vendors/vegas/vegas.min.css" />
-    <link rel="stylesheet" href="assets/vendors/jquery-ui/jquery-ui.css" />
-    <link rel="stylesheet" href="assets/vendors/timepicker/timePicker.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/animate/animate.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/animate/custom-animate.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/jarallax/jarallax.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/nouislider/nouislider.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/nouislider/nouislider.pips.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/odometer/odometer.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/swiper/swiper.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/zeinet-icons/style.css">
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/tiny-slider/tiny-slider.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/reey-font/stylesheet.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/owl-carousel/owl.carousel.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/owl-carousel/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/bxslider/jquery.bxslider.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/bootstrap-select/css/bootstrap-select.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/vegas/vegas.min.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/jquery-ui/jquery-ui.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/vendors/timepicker/timePicker.css" />
 
     <!-- template styles -->
-    <link rel="stylesheet" href="assets/css/zeinet.css" />
-    <link rel="stylesheet" href="assets/css/zeinet-responsive.html" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/css/zeinet.css" />
+    <link rel="stylesheet" href="{% static 'website/' %}assets/css/zeinet-responsive.html" />
 </head>
 
 <body class="custom-cursor">
@@ -71,7 +73,7 @@
                     <div class="main-menu__wrapper clearfix">
                         <div class="main-menu__left">
                             <div class="main-menu__logo">
-                                <a href="index.html"><img src="assets/images/resources/logo-1.png" alt="" width="125" height="43"></a>
+                                <a href="{% url 'home' %}"><img src="{% static 'website/' %}assets/images/resources/hurucom logo.png" alt="" width="140" height="80"></a>
                             </div>
                         </div>
                         <div class="main-menu__right">
@@ -90,7 +92,7 @@
                                             <i class="fas fa-envelope"></i>
                                         </div>
                                         <div class="text">
-                                            <p><a href="mailto:needhelp@company.com">needhelp@company.com</a></p>
+                                            <p><a href="mailto:needhelp@hurucom.net">needhelp@hurucom.net</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -106,7 +108,7 @@
                                     <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
                                     <ul class="main-menu__list">
                                         <li class="megamenu megamenu-clickable megamenu-clickable--toggler">
-                                            <a href="index.html">Demos</a>
+                                            <!-- a href="index.html">Demos</a -->
                                             <ul>
                                                 <li>
                                                     <div class="megamenu-popup">
@@ -254,54 +256,46 @@
                                         <li class="dropdown">
                                             <a href="#">Pages</a>
                                             <ul class="shadow-box">
-                                                <li><a href="about.html">About</a></li>
-                                                <li><a href="movie.html">Movie</a></li>
-                                                <li><a href="team.html">Team</a></li>
-                                                <li><a href="team-carousel.html">Team carousel</a></li>
-                                                <li><a href="gallery.html">Gallery</a></li>
-                                                <li><a href="gallery-carousel.html">Gallery carousel</a></li>
-                                                <li><a href="packages-01.html">Packages 01</a></li>
-                                                <li><a href="packages-02.html">Packages 02</a></li>
-                                                <li><a href="testimonials.html">Testimonial</a></li>
-                                                <li><a href="testimonials.html">Testimonial carousel</a></li>
-                                                <li><a href="faq.html">FAQs</a></li>
-                                                <li><a href="404.html">404 Error</a></li>
+                                                <li ><a href="{% url 'about' %}">About</a></li>
+                                                <li><a href="{% url 'team' %}">Team</a></li>
+                                                <li><a href="{% url 'teamcarousel' %}">Team carousel</a></li>
+                                                <li><a href="{% url 'gallery' %}">Gallery</a></li>
+                                                <li><a href="{% url 'gallerycarousel' %}">Gallery carousel</a></li>
+                                                <li><a href="{% url 'packages1' %}">Packages 01</a></li>
+                                                <li><a href="{% url 'packages2' %}">Packages 02</a></li>
+                                                <li><a href="{% url 'testimonials' %}">Testimonial</a></li>
+                                                <li><a href="{% url 'faq' %}">FAQs</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Services</a>
                                             <ul class="shadow-box">
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="services-carousel.html">Services carousel</a></li>
-                                                <li><a href="broadband.html">Broadband</a></li>
-                                                <li><a href="tv-streaming.html">TV & streaming</a></li>
-                                                <li><a href="all-for-mobile.html">All for mobile</a></li>
-                                                <li><a href="fast-internet.html">Fast Internet</a></li>
-                                                <li><a href="satelite-tv.html">Satelite TV</a></li>
+                                                <li><a href="{% url 'services' %}">Services</a></li>
+                                                <li><a href="{% url 'servicescarousel' %}">Services carousel</a></li>
                                             </ul>
                                         </li>
 
                                         <li class="dropdown">
                                             <a href="#">News</a>
                                             <ul class="shadow-box">
-                                                <li><a href="news.html">News</a></li>
-                                                <li><a href="news-carousel.html">News carousel</a></li>
-                                                <li><a href="news-sidebar.html">News right sidebar</a></li>
-                                                <li><a href="news-sidebar-left.html">News left sidebar</a></li>
-                                                <li><a href="news-details.html">News details</a></li>
+                                                <li><a href="{% url 'news' %}">News</a></li>
+                                                <li><a href="{% url 'newscarousel' %}">News carousel</a></li>
+                                                <li><a href="{% url 'newssidebar' %}">News right sidebar</a></li>
+                                                <li><a href="{% url 'newssidebarleft' %}">News left sidebar</a></li>
+                                                <li><a href="{% url 'newsdetails' %}">News details</a></li>
                                             </ul>
                                         </li>
                                         <li class="dropdown">
                                             <a href="#">Shop</a>
                                             <ul class="shadow-box">
-                                                <li><a href="products.html">Products</a></li>
-                                                <li><a href="product-details.html">Product details</a></li>
-                                                <li><a href="cart.html">Cart</a></li>
-                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="{% url 'products' %}">Products</a></li>
+                                                <li><a href="{% url 'productdetails' %}">Product details</a></li>
+                                                <li><a href="{% url 'cart' %}">Cart</a></li>
+                                                <li><a href="{% url 'checkout' %}">Checkout</a></li>
                                             </ul>
                                         </li>
                                         <li>
-                                            <a href="contact.html">Contact</a>
+                                            <a href="{% url 'contact' %}">Contact</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -336,7 +330,7 @@
 
         <!--Page Header Start-->
         <section class="page-header">
-            <div class="page-header-bg" style="background-image: url(assets/images/backgrounds/page-header-bg.jpg)">
+            <div class="page-header-bg" style="background-image: url({% static 'website/' %}assets/images/backgrounds/page-header-bg.jpg)">
             </div>
             <div class="main-slider-border"></div>
             <div class="main-slider-border main-slider-border-two"></div>
@@ -347,7 +341,7 @@
             <div class="container">
                 <div class="page-header__inner">
                     <ul class="thm-breadcrumb list-unstyled">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="{% url 'home' %}">Home</a></li>
                         <li><span>//</span></li>
                         <li>FAQs</li>
                     </ul>
@@ -467,7 +461,7 @@
                         <div class="faq-page__right">
                             <div class="service-details__need-help">
                                 <div class="service-details__need-help-bg"
-                                    style="background-image: url(assets/images/backgrounds/service-details-need-help-bg.jpg)">
+                                    style="background-image: url({% static 'website/' %}assets/images/backgrounds/service-details-need-help-bg.jpg)">
                                 </div>
                                 <div class="service-details__need-help-icon">
                                     <span class="icon-phone-call"></span>
@@ -476,11 +470,11 @@
                                 </h2>
                                 <div class="service-details__need-help-contact">
                                     <p>Call anytime</p>
-                                    <a href="tel:8898006802">+88 (9800) - 6802</a>
+                                    <a href="tel:254707556977">+254 707 556 977</a>
                                 </div>
                             </div>
                             <div class="service-details__download">
-                                <a href="contact.html" class="thm-btn service-details__btn">Get started now</a>
+                                <a href="{% url 'contact' %}" class="thm-btn service-details__btn">Get started now</a>
                             </div>
                         </div>
                     </div>
@@ -493,15 +487,14 @@
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer-shape-bg"
-                style="background-image: url(assets/images/shapes/site-footer-shape-bg.png);"></div>
+                style="background-image: url({% static 'website/' %}assets/images/shapes/site-footer-shape-bg.png);"></div>
             <div class="container">
                 <div class="site-footer__top">
                     <div class="row">
                         <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
                             <div class="footer-widget__column footer-widget__about">
                                 <div class="footer-widget__about-text-box">
-                                    <p class="footer-widget__about-text">TV on your every screen with the so fastest
-                                        internet</p>
+                                    <p class="footer-widget__about-text">Quality fast internet connection</p>
                                 </div>
                                 <div class="site-footer__social">
                                     <a href="#"><i class="fab fa-twitter"></i></a>
@@ -526,8 +519,7 @@
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
                             <div class="footer-widget__column footer-widget__meet-us clearfix">
                                 <h3 class="footer-widget__title">Meet us</h3>
-                                <p class="ooter-widget__meet-us-text">30 Broklyn Golden Street, New <br> York United
-                                    States of <br> America</p>
+                                <p class="ooter-widget__meet-us-text">Laikipia East <br> Nanyuki <br> Kenya</p>
                             </div>
                         </div>
                         <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
@@ -536,12 +528,12 @@
                                 <ul class="list-unstyled footer-widget__contact-list">
                                     <li>
                                         <div class="text">
-                                            <p><a href="mailto:needhelp@company.com ">needhelp@company.com</a></p>
+                                            <p><a href="mailto:needhelp@hurucom.net ">needhelp@hurucom.net</a></p>
                                         </div>
                                     </li>
                                     <li>
                                         <div class="text">
-                                            <p><a href="tel:8898006802">+88 (9800) 6802</a></p>
+                                            <p><a href="tel:254707556977">+254 707 556 977</a></p>
                                         </div>
                                     </li>
                                 </ul>
@@ -553,7 +545,7 @@
                     <div class="row">
                         <div class="col-xl-12">
                             <div class="site-footer__bottom-inner">
-                                <p class="site-footer__bottom-text">© All Copyright 2022 by <a href="#">Zeinet.com</a>
+                                <p class="site-footer__bottom-text">© All Copyright 2024 by <a href="#">Hurucom.net</a>
                                 </p>
                             </div>
                         </div>
@@ -574,7 +566,7 @@
             <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
 
             <div class="logo-box">
-                <a href="index.html" aria-label="logo image"><img src="assets/images/resources/logo-2.png" width="125" height="43"
+                <a href="{% url 'home' %}" aria-label="logo image"><img src="{% static 'website/' %}assets/images/resources/logo-2.png" width="125" height="43"
                         alt="" /></a>
             </div>
             <!-- /.logo-box -->
@@ -584,11 +576,11 @@
             <ul class="mobile-nav__contact list-unstyled">
                 <li>
                     <i class="fa fa-envelope"></i>
-                    <a href="mailto:needhelp@packageName__.com">needhelp@zeinet.com</a>
+                    <a href="mailto:needhelp@hurucom.net">needhelp@hurucom.net</a>
                 </li>
                 <li>
                     <i class="fa fa-phone-alt"></i>
-                    <a href="tel:666-888-0000">666 888 0000</a>
+                    <a href="tel:254707556977">+254 707 556 977</a>
                 </li>
             </ul><!-- /.mobile-nav__contact -->
             <div class="mobile-nav__top">
@@ -626,36 +618,36 @@
     <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="icon-right-arrow"></i></a>
 
 
-    <script src="assets/vendors/jquery/jquery-3.6.0.min.js"></script>
-    <script src="assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendors/jarallax/jarallax.min.js"></script>
-    <script src="assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
-    <script src="assets/vendors/jquery-appear/jquery.appear.min.js"></script>
-    <script src="assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
-    <script src="assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
-    <script src="assets/vendors/jquery-validate/jquery.validate.min.js"></script>
-    <script src="assets/vendors/nouislider/nouislider.min.js"></script>
-    <script src="assets/vendors/odometer/odometer.min.js"></script>
-    <script src="assets/vendors/swiper/swiper.min.js"></script>
-    <script src="assets/vendors/tiny-slider/tiny-slider.min.js"></script>
-    <script src="assets/vendors/wnumb/wNumb.min.js"></script>
-    <script src="assets/vendors/wow/wow.js"></script>
-    <script src="assets/vendors/isotope/isotope.js"></script>
-    <script src="assets/vendors/countdown/countdown.min.js"></script>
-    <script src="assets/vendors/owl-carousel/owl.carousel.min.js"></script>
-    <script src="assets/vendors/bxslider/jquery.bxslider.min.js"></script>
-    <script src="assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
-    <script src="assets/vendors/vegas/vegas.min.js"></script>
-    <script src="assets/vendors/jquery-ui/jquery-ui.js"></script>
-    <script src="assets/vendors/timepicker/timePicker.js"></script>
-    <script src="assets/vendors/circleType/jquery.circleType.js"></script>
-    <script src="assets/vendors/circleType/jquery.lettering.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery/jquery-3.6.0.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jarallax/jarallax.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-appear/jquery.appear.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-validate/jquery.validate.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/nouislider/nouislider.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/odometer/odometer.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/swiper/swiper.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/tiny-slider/tiny-slider.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/wnumb/wNumb.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/wow/wow.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/isotope/isotope.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/countdown/countdown.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/owl-carousel/owl.carousel.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/bxslider/jquery.bxslider.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/vegas/vegas.min.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/jquery-ui/jquery-ui.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/timepicker/timePicker.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/circleType/jquery.circleType.js"></script>
+    <script src="{% static 'website/' %}assets/vendors/circleType/jquery.lettering.min.js"></script>
 
 
 
 
     <!-- template js -->
-    <script src="assets/js/zeinet.js"></script>
+    <script src="{% static 'website/' %}assets/js/zeinet.js"></script>
 </body>
 
 
