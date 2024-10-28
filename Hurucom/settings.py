@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-45ln@%rqul5kx(3g2yg*b5rso)$fuvo4)2n+(8mx=*3bij76w*'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['deuce.pythonanywhere.com', 'localhost']
+ALLOWED_HOSTS = ['deuce.pythonanywhere.com', 'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website',
+    'subscribers',
 ]
 
 MIDDLEWARE = [
@@ -129,3 +130,19 @@ STATIC_ROOT = ''
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Email Configurations
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'isaiahnyamu@gmail.com'
+EMAIL_HOST_PASSWORD = 'pgoocuuillbdfzxv'
+
+#EMAIL_HOST = 'live.smtp.mailtrap.io'
+#EMAIL_HOST_USER = 'api'
+#EMAIL_HOST_PASSWORD = '096ea579a1d1e293b55e4d27cde670b8'
+#EMAIL_PORT = '587'
+#EMAIL_USE_TLS = True
+#EMAIL_USE_SSL = False

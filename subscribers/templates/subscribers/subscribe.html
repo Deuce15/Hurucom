@@ -1,0 +1,23 @@
+<!-- subscribers/subscribe.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Subscribe</title>
+</head>
+<body>
+    <h1>Subscribe to our Newsletter</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Subscribe</button>
+    </form>
+    {% if messages %}
+        <ul>
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

@@ -1,3 +1,8 @@
+import os
+
+from flask import Flask, request, redirect, url_for
+from flask_mail import Mail, Message
+
 from django.shortcuts import render
 
 # Create your views here.
@@ -67,3 +72,26 @@ def servicescarousel(request):
 
 def testimonials(request):
     return render(request, 'testimonials.html', {})
+
+app = Flask(__name__)
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_SSL'] = True
+app.config['MAIL_USERNAME'] = os.environ.get('EMAIL_USER')
+app.config['MAIL_PASSWORD'] = os.environ.get('EMAIL_PASS')
+mail = Mail(app)
+
+@app.route('/subscribe', methods=['POST'])
+def subscribe():
+    email = request.form['i.nyamu5@gmail.com']
+    message = Message('Subscription Confirmation', sender='sender@example.com', recipients=[email])
+    message.body = 'Thank you for subscribing to our newsletter!'
+    mail.send(message)
+    return redirect(url_for('success'))
+
+@app.route('/success')
+def success():
+    return '<h1>Subscription successful!</h1>'
+
+if __name__ == '__main__':
+    app.run(debug=True)
